@@ -1,0 +1,2915 @@
+window.SEEK_CONFIG = {
+  "SEEK_API_V4_SEARCH_ENDPOINT_NZ_PUBLIC": "\u002Fapi\u002Fchalice-search\u002Fv4\u002Fsearch",
+  "SEEK_JOB_TRACKING_URL": "https:\u002F\u002Ftracking.engineering.cloud.seek.com.au\u002Fa.png",
+  "SEEK_SOL_TRACKING_ENDPOINT": "https:\u002F\u002Fweb.aips-sol.com",
+  "SEEK_METRICS_PREFIX": "discover",
+  "SEEK_RAYGUN_API_KEY": "pvs26ei1O+BR2OKOElyF8w==",
+  "SEEK_DATADOG_RUM_APPLICATION_METADATA": "{\"applicationId\":\"cfba1d30-54e3-4a25-b2ab-4af0c589515a\",\"clientToken\":\"pub5a88787c972861476b14b524d64495c7\"}",
+  "NODE_ENV": "production",
+  "SEEK_METRICS_ENABLED": "true",
+  "SEEK_DATADOG_RUM_ENABLED": "true",
+  "SEEK_STATSD_HOST": "localhost",
+  "SEEK_JOB_TRACKING_ENABLED": "true",
+  "SEEK_LOG_LEVEL": "info",
+  "SEEK_SIGN_IN_REG_URL_PREFIX": "",
+  "SEEK_ADVERTS_ENABLED": "true",
+  "SEEK_ENVIRONMENT": "production",
+  "SEEK_API_EVENT_CAPTURE_ENDPOINT": "https:\u002F\u002Fchalice-experience-api.cloud.seek.com.au\u002Fevent-capture-proxy\u002F",
+  "SEEK_API_V4_COUNTS_ENDPOINT": "https:\u002F\u002Fjobsearch-api-ts.cloud.seek.com.au\u002Fv4\u002Fcounts",
+  "SEEK_METRICS_HOST": "https:\u002F\u002Fdiscover-metrics.cloud.seek.com.au",
+  "SEEK_SAVED_SEARCHES_PATH": "\u002Fmy-activity\u002Fsaved-searches",
+  "SEEK_HOTJAR_ENABLED": "true",
+  "SEEK_ANALYTICS_ENABLED": "true",
+  "SEEK_STATSD_PORT": "8125",
+  "SEEK_VERSION": "gantry-c30ca6b.29432",
+  "SEEK_LEARNING_LMIS_ENDPOINT_PUBLIC": "\u002Flearning\u002Fapi\u002Flmis\u002F",
+  "SEEK_API_NUDGES_ENDPOINT": "https:\u002F\u002Fnudge-api.cloud.seek.com.au",
+  "SEEK_API_V4_SEARCH_ENDPOINT_PUBLIC": "\u002Fapi\u002Fchalice-search\u002Fv4\u002Fsearch",
+  "SEEK_RAYGUN_ENABLED": "true",
+  "SEEK_API_V4_RELATED_SEARCHES_ENDPOINT_PUBLIC": "\u002Fapi\u002Fchalice-search\u002Fv4\u002Frelated-search",
+  "SEEK_SIGN_IN_PATH": "\u002Foauth\u002Flogin",
+  "SEEK_WARMUP_ENABLED": "true",
+  "SEEK_REGISTER_PATH": "\u002Foauth\u002Fregister"
+};
+  window.SEEK_REDUX_DATA = {
+  "appConfig": {
+    "brand": "seek",
+    "language": "en",
+    "zone": "anz-1",
+    "zoneFeatures": {
+      "COMPANY_PROFILE_CAROUSEL": true,
+      "QUICK_SEARCH_ENABLED": true,
+      "QUICK_SEARCH_CLASSIFICATIONS": true,
+      "LMIS_ENABLED": true,
+      "NUDGE_ENABLED": true,
+      "DNS_PREFETCH_DOMAIN": "\u002F\u002Fchalice-experience.cloud.seek.com.au\u002F",
+      "SHOW_HOMEPAGE_BANNER": true,
+      "SHOW_FLOATING_SAVE_SEARCH": true,
+      "SHOULD_OPEN_APPLY_IN_NEW_TAB": false,
+      "SHOULD_SHORTEN_HEADER": false,
+      "SHOW_JOBCARD_TEASER_IN_SPLITVIEW": true,
+      "AUTO_SELECT_SPLIT_VIEW_FIRST_JOB": true
+    },
+    "timedBanners": {
+      "privatePolicyBanner": {
+        "privatePolicy": {
+          "displayDates": {
+            "startDate": "2023-10-15T00:00:00.000Z",
+            "endDate": "2023-11-14T23:59:59.000Z"
+          },
+          "type": "PrivacyPolicy"
+        }
+      }
+    },
+    "defaultLocale": "en-AU",
+    "availableLocales": [
+      "en-AU"
+    ],
+    "BRANCH_IO_KEY": "key_live_hpVf26efkYxTQTj88NJzZpchsqglHGRe",
+    "selectedLocale": "en-AU"
+  },
+  "experiments": {
+    "splitView": {
+      "name": "job_details_split_view",
+      "variation": {
+        "name": "outsider",
+        "index": "2"
+      },
+      "num": 5
+    },
+    "aaTest": {
+      "name": "aa_test",
+      "variation": {
+        "name": "outsider",
+        "index": "2"
+      },
+      "num": 4
+    }
+  },
+  "featureFlags": {
+    "branchBannerPreview": false,
+    "isBranchEnabledFlag": false,
+    "splitView": false,
+    "retireDisplayAds":undefined,
+    "isApolloJDVEnabled":undefined,
+    "smarterSearchLaunchCluster":undefined,
+    "seoMetaTags": false,
+    "displayCandidateOnboardingBanner":undefined,
+    "blendedSerp":undefined,
+    "showHomepageBanner": true,
+    "showFloatingSaveSearch": true,
+    "shouldOpenApplyInNewTab": false,
+    "autoSelectSplitViewFirstJob": true,
+    "showStickyApplyOnDesktop":undefined
+  },
+  "jobdetails": {
+    "fraudReport": {},
+    "jobPending": false,
+    "result": null,
+    "pageLoadedCount": 0,
+    "personalised": null
+  },
+  "recentSearches": {
+    "searches": []
+  },
+  "lmis": {
+    "SRP": {
+      "content": "",
+      "lmisSnippet":undefined
+    },
+    "JDP": {
+      "content": "",
+      "lmisSnippet":undefined
+    }
+  },
+  "location": {
+    "url": "https:\u002F\u002Fwww.seek.com.au\u002FSoftware-jobs",
+    "country": "AU",
+    "prevPathname": "",
+    "query": {},
+    "pageNumber": 1,
+    "isHomepage": false,
+    "pageTitle": "Software Jobs in All Australia",
+    "pathname": "\u002FSoftware-jobs",
+    "hostname": "www.seek.com.au",
+    "href": "https:\u002F\u002Fwww.seek.com.au\u002FSoftware-jobs",
+    "port": "",
+    "protocol": "https:",
+    "requestId":undefined,
+    "hash": ""
+  },
+  "nudges": {
+    "nudges": [],
+    "currentNudgeIndex": 0,
+    "nudgePostError": false,
+    "nudgesCompleted": false
+  },
+  "results": {
+    "results": {
+      "isLoading": false,
+      "isZeroResults": false,
+      "summary": {
+        "displayTotalCount": "16,534",
+        "text": "jobs found"
+      },
+      "header": null,
+      "suggestions": null,
+      "hasHeaderBeforeJobs": false,
+      "searchParams": {
+        "keywords": "Software"
+      },
+      "jobs": [
+        {
+          "advertiser": {
+            "id": "43125713",
+            "description": "Container Exchange (Services) Pty Ltd"
+          },
+          "area": "North Shore & Northern Beaches",
+          "areaId": 5028,
+          "areaWhereValue": "North Shore & Northern Beaches Sydney NSW",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "9a87d3df-5e44-421a-85d8-e7e07293d9c8.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9a87d3df-5e44-421a-85d8-e7e07293d9c8.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9a87d3df-5e44-421a-85d8-e7e07293d9c8.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Rapidly growing eco-tech business with corporate backing",
+            "Work with Modern tech & make a positive impact on the environment",
+            "Hybrid role (3 days WFH) working in an Agile, collaborative team"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "promoted",
+          "listingDateDisplay": "1d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71437182,
+          "isPremium": true,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "North Sydney, Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "North Sydney NSW 2060"
+              },
+              {
+                "contextualName": "All Sydney NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T08:17:15Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineering-manager",
+          "salary": "Competitive salary + hybrid working",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71437182",
+            "section": "MAIN",
+            "sectionRank": 1,
+            "jobAdType": "SPONSORED",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "North Sydney",
+          "suburbId": 24000,
+          "suburbWhereValue": "North Sydney NSW 2060",
+          "teaser": "Lead development teams to expand our bespoke industry solutions for our clients (recycling schemes) on modern tech (React\u002FJava\u002FAWS\u002FKafka\u002FKubernetes)",
+          "title": "Software Engineering Manager",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMSIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "400812009",
+            "description": "BrightHR"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "6f890293-b200-431e-806c-3540ad0b87dd.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F6f890293-b200-431e-806c-3540ad0b87dd.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F6f890293-b200-431e-806c-3540ad0b87dd.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Uncapped commission - earning potential in excess of $100k",
+            "Join a well established and award winning global HR software business",
+            "Exceptional career growth and full training provided"
+          ],
+          "classification": {
+            "id": "6362",
+            "description": "Sales"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "promoted",
+          "listingDateDisplay": "1d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71448120,
+          "isPremium": true,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T23:30:51Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "sales",
+          "salary": "$56k Base + super + uncapped comms",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71448120",
+            "section": "MAIN",
+            "sectionRank": 2,
+            "jobAdType": "SPONSORED",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6368",
+            "description": "Sales Representatives\u002FConsultants"
+          },
+          "suburb": "Sydney",
+          "suburbId": 16351,
+          "suburbWhereValue": "Sydney NSW 2000",
+          "teaser": "Join a high performing software sales team, be part of BrightHR's growth and achievable targets and commission!",
+          "title": "Software Sales | Entry Level",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMiIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "61634519",
+            "description": "Smart Urban Properties Australia"
+          },
+          "area": "Western Suburbs",
+          "areaId": 5073,
+          "areaWhereValue": "Western Suburbs Melbourne VIC",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "51d17de2-81d1-4141-a0c9-1dc4b7a62bf5.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F51d17de2-81d1-4141-a0c9-1dc4b7a62bf5.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F51d17de2-81d1-4141-a0c9-1dc4b7a62bf5.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Great growth & development opportunity",
+            "Hybrid work arrangements available",
+            "Growing company with excellent outlook"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "2d ago",
+          "location": "Melbourne",
+          "locationId": 1002,
+          "locationWhereValue": "All Melbourne VIC",
+          "id": 71424616,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Yarraville, Melbourne VIC",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Yarraville VIC 3013"
+              },
+              {
+                "contextualName": "All Melbourne VIC"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T02:36:53Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-developer",
+          "salary": "$90,000 – $110,000 per year",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71424616",
+            "section": "MAIN",
+            "sectionRank": 3,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Yarraville",
+          "suburbId": 10753,
+          "suburbWhereValue": "Yarraville VIC 3013",
+          "teaser": "We are seeking a passionate Software Developer who can contribute to designing software products, ensuring code quality and usability at all points.",
+          "title": "Software Developer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMyIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "43125713",
+            "description": "Container Exchange (Services) Pty Ltd"
+          },
+          "area": "North Shore & Northern Beaches",
+          "areaId": 5028,
+          "areaWhereValue": "North Shore & Northern Beaches Sydney NSW",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "9a87d3df-5e44-421a-85d8-e7e07293d9c8.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9a87d3df-5e44-421a-85d8-e7e07293d9c8.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9a87d3df-5e44-421a-85d8-e7e07293d9c8.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Rapidly growing eco-tech business with corporate backing",
+            "Work with Modern tech & make a positive impact on the environment",
+            "Hybrid role (3 days WFH) working in an Agile, collaborative team"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "1d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71437182,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "North Sydney, Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "North Sydney NSW 2060"
+              },
+              {
+                "contextualName": "All Sydney NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T08:17:15Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineering-manager",
+          "salary": "Competitive salary + hybrid working",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71437182",
+            "section": "MAIN",
+            "sectionRank": 4,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "North Sydney",
+          "suburbId": 24000,
+          "suburbWhereValue": "North Sydney NSW 2060",
+          "teaser": "Lead development teams to expand our bespoke industry solutions for our clients (recycling schemes) on modern tech (React\u002FJava\u002FAWS\u002FKafka\u002FKubernetes)",
+          "title": "Software Engineering Manager",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfNCIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "28307435",
+            "description": "Department of Agriculture and Fisheries"
+          },
+          "area": "CBD & Inner Suburbs",
+          "areaId": 5010,
+          "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "9c1c8d9d-9db0-4075-9cfa-5c41d768e622.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9c1c8d9d-9db0-4075-9cfa-5c41d768e622.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9c1c8d9d-9db0-4075-9cfa-5c41d768e622.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Permanent full-time",
+            "$92,658 - $100,498 per annum",
+            "Generous Superannuation"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Department of Agriculture & Fisheries QLD",
+          "companyProfileStructuredDataId": 7558,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "3d ago",
+          "location": "Brisbane",
+          "locationId": 1004,
+          "locationWhereValue": "All Brisbane QLD",
+          "id": 71396507,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Brisbane QLD",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Brisbane QLD"
+              },
+              {
+                "contextualName": "Queensland QLD"
+              }
+            ]
+          },
+          "listingDate": "2023-11-09T03:09:16Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-developer",
+          "salary": "$92,658 - $100,498 per annum",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71396507",
+            "section": "MAIN",
+            "sectionRank": 5,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Brisbane",
+          "suburbId": 18110,
+          "suburbWhereValue": "Brisbane QLD 4000",
+          "teaser": "This role would suit a software developer or systems administrator who has software development skills and is interested in Integration Software",
+          "title": "Software Developer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfNSIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "61883061",
+            "description": "Assembl Talent Pty Ltd"
+          },
+          "automaticInclusion": false,
+          "branding": {
+            "id": "545a2b03-61cf-49ee-b43a-3bb5e14039a7.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F545a2b03-61cf-49ee-b43a-3bb5e14039a7.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F545a2b03-61cf-49ee-b43a-3bb5e14039a7.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Ruby on Rails, Java, AWS, Agile, XP, TDD",
+            "140k - 180k + super",
+            "Build products that save peoples lives"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "2d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71404445,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-09T06:31:14Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "$140,000 – $180,000 per year",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71404445",
+            "section": "MAIN",
+            "sectionRank": 6,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "teaser": "Join a growing health-tech company building products that save peoples lives!",
+          "title": "Software Engineer - Health Tech",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfNiIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "34920099",
+            "description": "Tech Mahindra Limited"
+          },
+          "area": "CBD & Inner Suburbs",
+          "areaId": 5010,
+          "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "9cfd6209-b596-46c4-9608-d931004e34a1.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9cfd6209-b596-46c4-9608-d931004e34a1.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9cfd6209-b596-46c4-9608-d931004e34a1.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Tech Mahindra",
+          "companyProfileStructuredDataId": 4147,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "1d ago",
+          "location": "Brisbane",
+          "locationId": 1004,
+          "locationWhereValue": "All Brisbane QLD",
+          "id": 71438077,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Brisbane QLD",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Brisbane QLD"
+              },
+              {
+                "contextualName": "Queensland QLD"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T09:05:13Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "$100,000 – $120,000 per year",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71438077",
+            "section": "MAIN",
+            "sectionRank": 7,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Brisbane",
+          "suburbId": 18110,
+          "suburbWhereValue": "Brisbane QLD 4000",
+          "teaser": "Software Engineer - 261313",
+          "title": "Software Engineer - 261313",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfNyIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "36441324",
+            "description": "Benchmark Monitoring"
+          },
+          "automaticInclusion": false,
+          "branding": {
+            "id": "398f7df1-1530-1320-c6e8-d9dcb0a51887.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F398f7df1-1530-1320-c6e8-d9dcb0a51887.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F398f7df1-1530-1320-c6e8-d9dcb0a51887.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Benchmark Monitoring",
+          "companyProfileStructuredDataId": 340213,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "1d ago",
+          "location": "Newcastle, Maitland & Hunter",
+          "locationId": 5045,
+          "locationWhereValue": "Newcastle, Maitland & Hunter NSW",
+          "id": 71446599,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Singleton, Newcastle, Maitland & Hunter NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Singleton NSW 2330"
+              },
+              {
+                "contextualName": "Newcastle, Maitland & Hunter NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T19:18:52Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71446599",
+            "section": "MAIN",
+            "sectionRank": 8,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "Singleton",
+          "suburbId": 15766,
+          "suburbWhereValue": "Singleton NSW 2330",
+          "teaser": "Software Engineer \u002F Developer",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfOCIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "10199162",
+            "description": "Synechron Australia Pty Ltd"
+          },
+          "area": "CBD & Inner Suburbs",
+          "areaId": 5069,
+          "areaWhereValue": "Melbourne CBD & Inner Suburbs Melbourne VIC",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Synechron",
+          "companyProfileStructuredDataId": 509607,
+          "displayStyle": {},
+          "displayType": "standard",
+          "listingDateDisplay": "1d ago",
+          "location": "Melbourne",
+          "locationId": 1002,
+          "locationWhereValue": "All Melbourne VIC",
+          "id": 71446194,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Melbourne VIC",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Melbourne VIC"
+              },
+              {
+                "contextualName": "Victoria VIC"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T17:50:21Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71446194",
+            "section": "MAIN",
+            "sectionRank": 9,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "Melbourne",
+          "suburbId": 18578,
+          "suburbWhereValue": "Melbourne VIC 3000",
+          "teaser": "We are looking for talented Software Engineers to join our team!",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfOSIKfQ==",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "38085802",
+            "description": "Blackbook.AI"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Blackbook.AI",
+          "companyProfileStructuredDataId": 353007,
+          "displayType": "standard",
+          "listingDateDisplay": "5d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71328351,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-07T01:56:37Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71328351",
+            "section": "MAIN",
+            "sectionRank": 10,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Sydney",
+          "suburbId": 16351,
+          "suburbWhereValue": "Sydney NSW 2000",
+          "teaser": "Join a national consulting firm working with clients across a range of fields.",
+          "title": "Graduate Associate Consultants, Developers and Software Engineers",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTAiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "21074881",
+            "description": "Aluminium Industries"
+          },
+          "area": "Bayside & South Eastern Suburbs",
+          "areaId": 5070,
+          "areaWhereValue": "Bayside & South Eastern Suburbs Melbourne VIC",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "85ee9727-eeb2-399c-067a-d17cac48d4a6.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F85ee9727-eeb2-399c-067a-d17cac48d4a6.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F85ee9727-eeb2-399c-067a-d17cac48d4a6.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Work in our office or remotely",
+            "Write & ship software that gives practical solutions to manuacturing challenges",
+            "Learn, grow, and thrive"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Aluminium Industries",
+          "companyProfileStructuredDataId": 211854,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "3d ago",
+          "location": "Melbourne",
+          "locationId": 1002,
+          "locationWhereValue": "All Melbourne VIC",
+          "id": 71392110,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Dandenong South, Melbourne VIC",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Dandenong South VIC 3175"
+              },
+              {
+                "contextualName": "All Melbourne VIC"
+              }
+            ]
+          },
+          "listingDate": "2023-11-09T01:36:22Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71392110",
+            "section": "MAIN",
+            "sectionRank": 11,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "Dandenong South",
+          "suburbId": 15078,
+          "suburbWhereValue": "Dandenong South VIC 3175",
+          "teaser": "Join our in-house SaaS development division and help us employ smart software solutions to manufacturing challenges.",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTEiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "62050158",
+            "description": "Ferag Australia Pty Ltd"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "ca2e9e2d-4e79-44bb-8218-56e56bb64f10.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fca2e9e2d-4e79-44bb-8218-56e56bb64f10.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fca2e9e2d-4e79-44bb-8218-56e56bb64f10.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "great culture",
+            "market leader"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "2d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71420540,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Matraville, Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Matraville NSW 2036"
+              },
+              {
+                "contextualName": "All Sydney NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T02:42:15Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-support-engineer",
+          "salary": "$85,000 – $95,000 per year",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71420540",
+            "section": "MAIN",
+            "sectionRank": 12,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6291",
+            "description": "Help Desk & IT Support"
+          },
+          "suburb": "Matraville",
+          "suburbId": 18476,
+          "suburbWhereValue": "Matraville NSW 2036",
+          "teaser": "This is a fascinating role at a true market leader. We offer a fantastic team with a great culture, allowing you to grow your career with us.",
+          "title": "Software Support Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTIiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "25791026",
+            "description": "Queensland Rail"
+          },
+          "area": "CBD & Inner Suburbs",
+          "areaId": 5010,
+          "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "da3e0dbd-bcec-1101-2fcc-f55ab28ce41c.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fda3e0dbd-bcec-1101-2fcc-f55ab28ce41c.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fda3e0dbd-bcec-1101-2fcc-f55ab28ce41c.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Work with a dynamic team of project and subject matter professionals.",
+            "Flexible working arrangements and free Citytrain rail travel benefits.",
+            "Broad range of technologies with support for career development."
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Queensland Rail",
+          "companyProfileStructuredDataId": 435,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "2d ago",
+          "location": "Brisbane",
+          "locationId": 1004,
+          "locationWhereValue": "All Brisbane QLD",
+          "id": 71421242,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Brisbane QLD",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Brisbane QLD"
+              },
+              {
+                "contextualName": "Queensland QLD"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T00:55:06Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "systems-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71421242",
+            "section": "MAIN",
+            "sectionRank": 13,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Brisbane",
+          "suburbId": 18110,
+          "suburbWhereValue": "Brisbane QLD 4000",
+          "teaser": "Full time, permanent opportunities for talented and well-rounded Software and Systems Engineers to contribute to continuous improvements.",
+          "title": "Software and Systems Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTMiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "36169439",
+            "description": "Latitude Financial Services"
+          },
+          "automaticInclusion": false,
+          "branding": {
+            "id": "c4d28d81-322b-b559-fb9e-8fe20edaf441.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fc4d28d81-322b-b559-fb9e-8fe20edaf441.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002Fc4d28d81-322b-b559-fb9e-8fe20edaf441.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Multiple Software Engineering roles at various levels on offer.",
+            "Flexible working environment - work 1 day in the office",
+            "5 week annual leave program & social and corporate responsibility partners"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Latitude Financial Services",
+          "companyProfileStructuredDataId": 23693,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "4d ago",
+          "location": "Melbourne",
+          "locationId": 1002,
+          "locationWhereValue": "All Melbourne VIC",
+          "id": 71357896,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Melbourne VIC",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Melbourne VIC"
+              },
+              {
+                "contextualName": "Victoria VIC"
+              }
+            ]
+          },
+          "listingDate": "2023-11-08T03:19:29Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "+ Bonus",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71357896",
+            "section": "MAIN",
+            "sectionRank": 14,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "teaser": "Any prior experience in Golang programming and Okta? Okta is a nice to have, as long as you are willing to pick it up.",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTQiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "23960363",
+            "description": "JobAdder Pty Ltd"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "JobAdder",
+          "companyProfileStructuredDataId": 7369,
+          "displayStyle": {},
+          "displayType": "standard",
+          "listingDateDisplay": "2d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71424266,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T02:25:05Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71424266",
+            "section": "MAIN",
+            "sectionRank": 15,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "Sydney",
+          "suburbId": 16351,
+          "suburbWhereValue": "Sydney NSW 2000",
+          "teaser": "Join our Engineering team responsible for the development and delivery of our market leading recruitment management platform.",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTUiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "62124509",
+            "description": "A1 Search PTY LTD"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayType": "standard",
+          "listingDateDisplay": "4d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71359060,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-08T03:59:05Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "$150,000 – $170,000 per year",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71359060",
+            "section": "MAIN",
+            "sectionRank": 16,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Sydney",
+          "suburbId": 16351,
+          "suburbWhereValue": "Sydney NSW 2000",
+          "teaser": "Opportunity to be part of the Founding Engineering team for a VC backed Tech-enabled Healthcare Startup.",
+          "title": "Software Engineer - Healthcare Startup",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTYiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "41100412",
+            "description": "Reach Robotics"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyProfileStructuredDataId": 0,
+          "displayType": "standard",
+          "listingDateDisplay": "2d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71430298,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Glebe, Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Glebe NSW 2037"
+              },
+              {
+                "contextualName": "All Sydney NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-10T04:34:07Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71430298",
+            "section": "MAIN",
+            "sectionRank": 17,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "suburb": "Glebe",
+          "suburbId": 20751,
+          "suburbWhereValue": "Glebe NSW 2037",
+          "teaser": "Create UI software for cutting-edge robotic systems. React, TS, C++, Python.",
+          "title": "Software Engineer - UI & Robotics",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTciCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "499892",
+            "description": "University of New South Wales"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "University of New South Wales",
+          "companyProfileStructuredDataId": 10126,
+          "displayStyle": {},
+          "displayType": "standard",
+          "listingDateDisplay": "3d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71399611,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Kensington, Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Kensington NSW 2033"
+              },
+              {
+                "contextualName": "All Sydney NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-09T03:59:14Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-developer",
+          "salary": "$96,960 - $103,434 + 17% Super and leave loading",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71399611",
+            "section": "MAIN",
+            "sectionRank": 18,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Kensington",
+          "suburbId": 13012,
+          "suburbWhereValue": "Kensington NSW 2033",
+          "teaser": "Use machine learning & natural language processing to integrate the EPIWATCH system, a rapid epidemic intelligence observatory, with an App.",
+          "title": "Software Developer – The Kirby Institute",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTgiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        },
+        {
+          "advertiser": {
+            "id": "24152400",
+            "description": "Pulse Mining Systems Pty Ltd"
+          },
+          "automaticInclusion": false,
+          "branding": {
+            "id": "034635fe-94b3-4b7c-975b-01354400a563.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F034635fe-94b3-4b7c-975b-01354400a563.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F034635fe-94b3-4b7c-975b-01354400a563.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Full time employment",
+            "Working onsite",
+            "Supportive team environment"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Pulse Mining Systems",
+          "companyProfileStructuredDataId": 9707,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "5d ago",
+          "location": "Newcastle, Maitland & Hunter",
+          "locationId": 5045,
+          "locationWhereValue": "Newcastle, Maitland & Hunter NSW",
+          "id": 71333774,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Newcastle, Newcastle, Maitland & Hunter NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "Newcastle NSW 2300"
+              },
+              {
+                "contextualName": "Newcastle, Maitland & Hunter NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-07T04:03:05Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-developer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71333774",
+            "section": "MAIN",
+            "sectionRank": 19,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Newcastle",
+          "suburbId": 23785,
+          "suburbWhereValue": "Newcastle NSW 2300",
+          "teaser": "We have opportunities available for Software Developers working within new development as well as modernisation projects within the Pulse product.",
+          "title": "Software Developer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMTkiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "43028454",
+            "description": "The Onset"
+          },
+          "area": "CBD, Inner West & Eastern Suburbs",
+          "areaId": 5027,
+          "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW",
+          "automaticInclusion": false,
+          "branding": {
+            "id": "9503323a-699e-a26f-28b5-70d6273c5373.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9503323a-699e-a26f-28b5-70d6273c5373.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F9503323a-699e-a26f-28b5-70d6273c5373.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Global SaaS – B2B2C",
+            "Typescript, Java",
+            "Hybrid (1 day in office)"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "The Onset",
+          "companyProfileStructuredDataId": 407519,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "4d ago",
+          "location": "Sydney",
+          "locationId": 1000,
+          "locationWhereValue": "All Sydney NSW",
+          "id": 71352028,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Sydney NSW",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Sydney NSW"
+              },
+              {
+                "contextualName": "New South Wales NSW"
+              }
+            ]
+          },
+          "listingDate": "2023-11-07T23:59:05Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "$160,000 + Super",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71352028",
+            "section": "MAIN",
+            "sectionRank": 20,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Sydney",
+          "suburbId": 16351,
+          "suburbWhereValue": "Sydney NSW 2000",
+          "teaser": "Full stack focus within a SaaS firm that helps people to monetise their passions!",
+          "title": "Senior Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMjAiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "42032854",
+            "description": "Rheinmetall Defence Australia"
+          },
+          "automaticInclusion": false,
+          "branding": {
+            "id": "79e9bcf7-ca6e-4bec-ac9f-c4535abcd32d.1",
+            "assets": {
+              "logo": {
+                "strategies": {
+                  "jdpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F79e9bcf7-ca6e-4bec-ac9f-c4535abcd32d.1\u002FjdpLogo",
+                  "serpLogo": "https:\u002F\u002Fbx-branding-gateway.cloud.seek.com.au\u002F79e9bcf7-ca6e-4bec-ac9f-c4535abcd32d.1\u002FserpLogo"
+                }
+              }
+            }
+          },
+          "bulletPoints": [
+            "Work in a collaborative team environment",
+            "Join a supportive and engaging team",
+            "Opportunity to work as part of a cutting edge team in R&D"
+          ],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Rheinmetall",
+          "companyProfileStructuredDataId": 622990,
+          "displayStyle": {
+            "search": "A"
+          },
+          "displayType": "standout",
+          "listingDateDisplay": "2d ago",
+          "location": "Adelaide",
+          "locationId": 1007,
+          "locationWhereValue": "All Adelaide SA",
+          "id": 71404601,
+          "isPremium": false,
+          "isStandOut": true,
+          "jobLocation": {
+            "label": "Adelaide SA",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Adelaide SA"
+              },
+              {
+                "contextualName": "South Australia SA"
+              }
+            ]
+          },
+          "listingDate": "2023-11-09T06:36:58Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "Competitive salary package on offer",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71404601",
+            "section": "MAIN",
+            "sectionRank": 21,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+          },
+          "tags": [
+            {
+              "type": "EARLY_APPLICANT",
+              "label": "Early applicant"
+            }
+          ],
+          "teaser": "Engage with multiple stakeholders to understand requirements and facilitate deliverables",
+          "title": "Product Owner & Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMjEiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false
+        },
+        {
+          "advertiser": {
+            "id": "45194038",
+            "description": "Fivecast"
+          },
+          "automaticInclusion": false,
+          "bulletPoints": [],
+          "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+          },
+          "companyName": "Fivecast",
+          "companyProfileStructuredDataId": 626922,
+          "displayStyle": {},
+          "displayType": "standard",
+          "listingDateDisplay": "6d ago",
+          "location": "Adelaide",
+          "locationId": 1007,
+          "locationWhereValue": "All Adelaide SA",
+          "id": 71297320,
+          "isPremium": false,
+          "isStandOut": false,
+          "jobLocation": {
+            "label": "Adelaide SA",
+            "countryCode": "AU",
+            "seoHierarchy": [
+              {
+                "contextualName": "All Adelaide SA"
+              },
+              {
+                "contextualName": "South Australia SA"
+              }
+            ]
+          },
+          "listingDate": "2023-11-06T01:05:22Z",
+          "logo": {
+            "id": "",
+            "description": null
+          },
+          "roleId": "software-engineer",
+          "salary": "",
+          "solMetadata": {
+            "searchRequestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+            "jobId": "71297320",
+            "section": "MAIN",
+            "sectionRank": 22,
+            "jobAdType": "ORGANIC",
+            "tags": {
+              "mordor__flights": "mordor_272",
+              "mordor__s": "0",
+              "seek:chalice:experiments:job_details_split_view": "2",
+              "seek:chalice:experiments:aa_test": "2"
+            }
+          },
+          "subClassification": {
+            "id": "6287",
+            "description": "Developers\u002FProgrammers"
+          },
+          "suburb": "Adelaide",
+          "suburbId": 11065,
+          "suburbWhereValue": "Adelaide SA 5000",
+          "teaser": "Join our best-in-class development team, and become a part of a revolutionary, state of the art start-up company with a globally recognised footprint",
+          "title": "Software Engineer",
+          "tracking": "ewogICJ0b2tlbiI6ICJmNTlhMTQ3ZC1lN2ZhLTRkYjYtYWI1ZC1lNWRjNWNmMzFiMDBfMjIiCn0=",
+          "workType": "Full time",
+          "isPrivateAdvertiser": false,
+          "branding":undefined
+        }
+      ],
+      "suburbs": [
+        "North Sydney NSW 2060",
+        "Sydney NSW 2000",
+        "Yarraville VIC 3013",
+        "Brisbane QLD 4000",
+        "Singleton NSW 2330",
+        "Melbourne VIC 3000",
+        "Dandenong South VIC 3175",
+        "Matraville NSW 2036",
+        "Glebe NSW 2037",
+        "Kensington NSW 2033",
+        "Newcastle NSW 2300",
+        "Adelaide SA 5000"
+      ]
+    },
+    "isLoading": false,
+    "isError": false,
+    "source": "JobSearch-sm",
+    "companySuggestion":undefined,
+    "locationWhere": "",
+    "title": "Software Jobs in All Australia",
+    "totalCount": 16534,
+    "jobIds": [
+      "71437182",
+      "71448120",
+      "71424616",
+      "71437182",
+      "71396507",
+      "71404445",
+      "71438077",
+      "71446599",
+      "71446194",
+      "71328351",
+      "71392110",
+      "71420540",
+      "71421242",
+      "71357896",
+      "71424266",
+      "71359060",
+      "71430298",
+      "71399611",
+      "71333774",
+      "71352028",
+      "71404601",
+      "71297320"
+    ],
+    "lastPage": 0,
+    "paginationParameters": {
+      "seekSelectAllPages": true,
+      "hadPremiumListings": true
+    },
+    "sortMode": [
+      {
+        "isActive": true,
+        "name": "Relevance",
+        "value": "KeywordRelevance"
+      },
+      {
+        "isActive": false,
+        "name": "Date",
+        "value": "ListedDate"
+      }
+    ],
+    "solReferenceKeys": [],
+    "hidden": false,
+    "relatedSearches": [
+      {
+        "keywords": "software engineer",
+        "totalJobs": 1885,
+        "type": "keyword"
+      },
+      {
+        "keywords": "software developer",
+        "totalJobs": 1767,
+        "type": "keyword"
+      },
+      {
+        "keywords": "junior software",
+        "totalJobs": 140,
+        "type": "keyword"
+      },
+      {
+        "keywords": "python",
+        "totalJobs": 2682,
+        "type": "keyword"
+      },
+      {
+        "keywords": "developer",
+        "totalJobs": 1705,
+        "type": "keyword"
+      },
+      {
+        "keywords": "it",
+        "totalJobs": 5902,
+        "type": "keyword"
+      },
+      {
+        "keywords": "c++",
+        "totalJobs": 1028,
+        "type": "keyword"
+      },
+      {
+        "keywords": "c#",
+        "totalJobs": 1829,
+        "type": "keyword"
+      }
+    ],
+    "selectedJobId":undefined,
+    "canonicalCompany":undefined,
+    "joraCrossLink": {
+      "canCrossLink": false
+    },
+    "location": {
+      "areaDescription": "",
+      "areaId": 0,
+      "description": "All Australia",
+      "locationDescription": "",
+      "locationId": 3000,
+      "matched": true,
+      "stateDescription": "",
+      "suburbParentDescription": "",
+      "type": "Country",
+      "whereId": 3000,
+      "descriptions": {
+        "en": {
+          "contextualName": "All Australia"
+        },
+        "id": {
+          "contextualName": "Australia"
+        },
+        "th": {
+          "contextualName": "ออสเตรเลีย"
+        }
+      }
+    },
+    "userQueryId": "36bc8c1589a005a43535a83e39161ba9b-6066889",
+    "uniqueSearchToken": "f59a147d-e7fa-4db6-ab5d-e5dc5cf31b00",
+    "solMetadata": {
+      "requestToken": "1ef14a50-ce21-4598-9127-f527e120c1f5",
+      "token": "0~1ef14a50-ce21-4598-9127-f527e120c1f5",
+      "keywords": "Software",
+      "sortMode": "RELEVANCE",
+      "locations": [
+        "All Australia",
+        "seek-3000"
+      ],
+      "locationDistance": 50,
+      "pageSize": 22,
+      "pageNumber": 1,
+      "totalJobCount": 16534,
+      "tags": {
+        "mordor:searchMarket": "UNIFIED_AU",
+        "mordor:result_count_rst": "1556",
+        "mordor:result_count_vec": "0",
+        "mordor:rt": "30",
+        "mordor:count_vec": "0",
+        "mordor__flights": "mordor_272",
+        "mordor:count_rst": "1556",
+        "mordor:count_ir": "14978",
+        "mordor:result_count_ir": "14978",
+        "chalice-search-api:solId": "d10c5f81-20c5-40f7-b0b4-d4ee8d774aac",
+        "dt_sol_correlation_id": "d426e134-32db-46ac-873c-167c6ea622b0",
+        "seek:chalice:experiments:job_details_split_view": "2",
+        "seek:chalice:experiments:aa_test": "2"
+      }
+    },
+    "solMetadataString": "{\"requestToken\":\"1ef14a50-ce21-4598-9127-f527e120c1f5\",\"token\":\"0~1ef14a50-ce21-4598-9127-f527e120c1f5\",\"keywords\":\"Software\",\"sortMode\":\"RELEVANCE\",\"locations\":[\"All Australia\",\"seek-3000\"],\"locationDistance\":50,\"pageSize\":22,\"pageNumber\":1,\"totalJobCount\":16534,\"tags\":{\"mordor:searchMarket\":\"UNIFIED_AU\",\"mordor:result_count_rst\":\"1556\",\"mordor:result_count_vec\":\"0\",\"mordor:rt\":\"30\",\"mordor:count_vec\":\"0\",\"mordor__flights\":\"mordor_272\",\"mordor:count_rst\":\"1556\",\"mordor:count_ir\":\"14978\",\"mordor:result_count_ir\":\"14978\",\"chalice-search-api:solId\":\"d10c5f81-20c5-40f7-b0b4-d4ee8d774aac\",\"dt_sol_correlation_id\":\"d426e134-32db-46ac-873c-167c6ea622b0\",\"seek:chalice:experiments:job_details_split_view\":\"2\",\"seek:chalice:experiments:aa_test\":\"2\"}}",
+    "isRadialFilterShown": false,
+    "isRadialFilterNudgeShown": false
+  },
+  "saveSearch": {
+    "emailAddress": "",
+    "errorMessage": "",
+    "saveable": true,
+    "status": "UNSAVED"
+  },
+  "search": {
+    "keywordsField": "Software",
+    "whereField": "",
+    "filtersExpanded": true,
+    "query": {
+      "keywords": "Software"
+    },
+    "lastQuery": {},
+    "hasLoadedCounts": false,
+    "refinements": {
+      "counts":undefined,
+      "worktype": [
+        {
+          "label": "Full time",
+          "value": "242",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "worktype": "242"
+          }
+        },
+        {
+          "label": "Part time",
+          "value": "243",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "worktype": "243"
+          }
+        },
+        {
+          "label": "Contract\u002FTemp",
+          "value": "244",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "worktype": "244"
+          }
+        },
+        {
+          "label": "Casual\u002FVacation",
+          "value": "245",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "worktype": "245"
+          }
+        }
+      ],
+      "salary": {
+        "types": [
+          {
+            "label": "Annually",
+            "value": "annual",
+            "isActive": true
+          },
+          {
+            "label": "Hourly",
+            "value": "hourly",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "hourly"
+            }
+          }
+        ],
+        "from": [
+          {
+            "label": "$0",
+            "value": "0",
+            "isActive": true
+          },
+          {
+            "label": "$30k",
+            "value": "30000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "30000-999999"
+            }
+          },
+          {
+            "label": "$40k",
+            "value": "40000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "40000-999999"
+            }
+          },
+          {
+            "label": "$50k",
+            "value": "50000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "50000-999999"
+            }
+          },
+          {
+            "label": "$60k",
+            "value": "60000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "60000-999999"
+            }
+          },
+          {
+            "label": "$70k",
+            "value": "70000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "70000-999999"
+            }
+          },
+          {
+            "label": "$80k",
+            "value": "80000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "80000-999999"
+            }
+          },
+          {
+            "label": "$100k",
+            "value": "100000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "100000-999999"
+            }
+          },
+          {
+            "label": "$120k",
+            "value": "120000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "120000-999999"
+            }
+          },
+          {
+            "label": "$150k",
+            "value": "150000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "150000-999999"
+            }
+          },
+          {
+            "label": "$200k",
+            "value": "200000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "200000-999999"
+            }
+          },
+          {
+            "label": "$350k",
+            "value": "350000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "350000-999999"
+            }
+          }
+        ],
+        "to": [
+          {
+            "label": "$30k",
+            "value": "30000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-30000"
+            }
+          },
+          {
+            "label": "$40k",
+            "value": "40000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-40000"
+            }
+          },
+          {
+            "label": "$50k",
+            "value": "50000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-50000"
+            }
+          },
+          {
+            "label": "$60k",
+            "value": "60000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-60000"
+            }
+          },
+          {
+            "label": "$70k",
+            "value": "70000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-70000"
+            }
+          },
+          {
+            "label": "$80k",
+            "value": "80000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-80000"
+            }
+          },
+          {
+            "label": "$100k",
+            "value": "100000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-100000"
+            }
+          },
+          {
+            "label": "$120k",
+            "value": "120000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-120000"
+            }
+          },
+          {
+            "label": "$150k",
+            "value": "150000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-150000"
+            }
+          },
+          {
+            "label": "$200k",
+            "value": "200000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-200000"
+            }
+          },
+          {
+            "label": "$350k",
+            "value": "350000",
+            "isActive": false,
+            "refineParams": {
+              "keywords": "Software",
+              "salarytype": "annual",
+              "salaryrange": "0-350000"
+            }
+          },
+          {
+            "label": "$350k+",
+            "value": "999999",
+            "isActive": true
+          }
+        ]
+      },
+      "dateRange": [
+        {
+          "label": "Any time",
+          "value": "",
+          "isActive": true
+        },
+        {
+          "label": "Today",
+          "value": "1",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "daterange": "1"
+          }
+        },
+        {
+          "label": "Last 3 days",
+          "value": "3",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "daterange": "3"
+          }
+        },
+        {
+          "label": "Last 7 days",
+          "value": "7",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "daterange": "7"
+          }
+        },
+        {
+          "label": "Last 14 days",
+          "value": "14",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "daterange": "14"
+          }
+        },
+        {
+          "label": "Last 30 days",
+          "value": "31",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "daterange": "31"
+          }
+        }
+      ],
+      "sortmode": [
+        {
+          "label": "Relevance",
+          "value": "KeywordRelevance",
+          "isActive": true
+        },
+        {
+          "label": "Date",
+          "value": "ListedDate",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "sortmode": "ListedDate"
+          }
+        }
+      ],
+      "distance": [
+        {
+          "label": "Exact location only",
+          "value": "0",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "distance": "0"
+          }
+        },
+        {
+          "label": "5 km",
+          "value": "5",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "distance": "5"
+          }
+        },
+        {
+          "label": "10 km",
+          "value": "10",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "distance": "10"
+          }
+        },
+        {
+          "label": "25 km",
+          "value": "25",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "distance": "25"
+          }
+        },
+        {
+          "label": "50 km",
+          "value": "50",
+          "isActive": true
+        },
+        {
+          "label": "100 km",
+          "value": "100",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "distance": "100"
+          }
+        }
+      ],
+      "classification": [
+        {
+          "label": "Accounting",
+          "value": "1200",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1200"
+          }
+        },
+        {
+          "label": "Administration & Office Support",
+          "value": "6251",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6251"
+          }
+        },
+        {
+          "label": "Advertising, Arts & Media",
+          "value": "6304",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6304"
+          }
+        },
+        {
+          "label": "Banking & Financial Services",
+          "value": "1203",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1203"
+          }
+        },
+        {
+          "label": "Call Centre & Customer Service",
+          "value": "1204",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1204"
+          }
+        },
+        {
+          "label": "CEO & General Management",
+          "value": "7019",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "7019"
+          }
+        },
+        {
+          "label": "Community Services & Development",
+          "value": "6163",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6163"
+          }
+        },
+        {
+          "label": "Construction",
+          "value": "1206",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1206"
+          }
+        },
+        {
+          "label": "Consulting & Strategy",
+          "value": "6076",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6076"
+          }
+        },
+        {
+          "label": "Design & Architecture",
+          "value": "6263",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6263"
+          }
+        },
+        {
+          "label": "Education & Training",
+          "value": "6123",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6123"
+          }
+        },
+        {
+          "label": "Engineering",
+          "value": "1209",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1209"
+          }
+        },
+        {
+          "label": "Farming, Animals & Conservation",
+          "value": "6205",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6205"
+          }
+        },
+        {
+          "label": "Government & Defence",
+          "value": "1210",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1210"
+          }
+        },
+        {
+          "label": "Healthcare & Medical",
+          "value": "1211",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1211"
+          }
+        },
+        {
+          "label": "Hospitality & Tourism",
+          "value": "1212",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1212"
+          }
+        },
+        {
+          "label": "Human Resources & Recruitment",
+          "value": "6317",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6317"
+          }
+        },
+        {
+          "label": "Information & Communication Technology",
+          "value": "6281",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6281"
+          }
+        },
+        {
+          "label": "Insurance & Superannuation",
+          "value": "1214",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1214"
+          }
+        },
+        {
+          "label": "Legal",
+          "value": "1216",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1216"
+          }
+        },
+        {
+          "label": "Manufacturing, Transport & Logistics",
+          "value": "6092",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6092"
+          }
+        },
+        {
+          "label": "Marketing & Communications",
+          "value": "6008",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6008"
+          }
+        },
+        {
+          "label": "Mining, Resources & Energy",
+          "value": "6058",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6058"
+          }
+        },
+        {
+          "label": "Real Estate & Property",
+          "value": "1220",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1220"
+          }
+        },
+        {
+          "label": "Retail & Consumer Products",
+          "value": "6043",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6043"
+          }
+        },
+        {
+          "label": "Sales",
+          "value": "6362",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6362"
+          }
+        },
+        {
+          "label": "Science & Technology",
+          "value": "1223",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1223"
+          }
+        },
+        {
+          "label": "Self Employment",
+          "value": "6261",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6261"
+          }
+        },
+        {
+          "label": "Sport & Recreation",
+          "value": "6246",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "6246"
+          }
+        },
+        {
+          "label": "Trades & Services",
+          "value": "1225",
+          "isActive": false,
+          "refineParams": {
+            "keywords": "Software",
+            "classification": "1225"
+          }
+        }
+      ],
+      "clear": {}
+    }
+  },
+  "seo": {
+    "canonicalUrl": "https:\u002F\u002Fwww.seek.com.au\u002Fsoftware-jobs",
+    "partners": {
+      "canCrossLink": false
+    },
+    "alternateLinks":undefined
+  },
+  "user": {
+    "authenticated": false,
+    "firstName": "",
+    "emailAddress": "",
+    "userClientId": "",
+    "testHeaders": {}
+  },
+  "ui": {
+    "isPageLoaded": false
+  },
+  "@@redux-hotjar-state": [
+    [
+      "Search Criteria: keywords"
+    ]
+  ]
+};
+  window.SEEK_APP_CONFIG = {
+  "zone": "anz-1",
+  "defaultLocale": "en-AU",
+  "availableLocales": [
+    "en-AU"
+  ],
+  "timedBanners": {
+    "privatePolicyBanner": {
+      "privatePolicy": {
+        "displayDates": {
+          "startDate": "2023-10-15T00:00:00.000Z",
+          "endDate": "2023-11-14T23:59:59.000Z"
+        },
+        "type": "PrivacyPolicy"
+      }
+    }
+  },
+  "zoneFeatures": {
+    "COMPANY_PROFILE_CAROUSEL": true,
+    "QUICK_SEARCH_ENABLED": true,
+    "QUICK_SEARCH_CLASSIFICATIONS": true,
+    "LMIS_ENABLED": true,
+    "NUDGE_ENABLED": true,
+    "DNS_PREFETCH_DOMAIN": "\u002F\u002Fchalice-experience.cloud.seek.com.au\u002F",
+    "SHOW_HOMEPAGE_BANNER": true,
+    "SHOW_FLOATING_SAVE_SEARCH": true,
+    "SHOULD_OPEN_APPLY_IN_NEW_TAB": false,
+    "SHOULD_SHORTEN_HEADER": false,
+    "SHOW_JOBCARD_TEASER_IN_SPLITVIEW": true,
+    "AUTO_SELECT_SPLIT_VIEW_FIRST_JOB": true
+  },
+  "BRANCH_IO_KEY": "key_live_hpVf26efkYxTQTj88NJzZpchsqglHGRe",
+  "brand": "seek",
+  "selectedLocale": "en-AU"
+};
+  window.SK_DL = {
+  "brand": "seek",
+  "isLoggedIn": false,
+  "loginId": "NULL",
+  "siteCountry": "au",
+  "siteLanguage": "en",
+  "siteSection": "discover",
+  "zone": "anz-1",
+  "experiments": [
+    {
+      "id": "job_details_split_view",
+      "variant": "2",
+      "num": 5
+    },
+    {
+      "id": "aa_test",
+      "variant": "2",
+      "num": 4
+    }
+  ],
+  "experimentFlightId": "mordor_272",
+  "searchId": "36bc8c1589a05a43535a83e39161ba9b-6066889",
+  "searchKeyword": "Software",
+  "classificationId": "NULL",
+  "subClassificationId": "NULL",
+  "locationInput": "NULL",
+  "marketingSeoLinkType": "Keyword",
+  "relatedSearchDisplayCount": 8,
+  "searchWorkTypeIds": "NULL",
+  "searchSalaryRange": "NULL",
+  "searchSalaryRangeMax": "NULL",
+  "searchSalaryRangeMin": "NULL",
+  "searchRadialDistance": "NULL",
+  "sortedBy": "KeywordRelevance",
+  "pageNumber": "1",
+  "searchLocationId": 3000,
+  "jobsCount": 16534,
+  "isRadialFilterShown": false,
+  "isRadialFilterNudgeShown": false
+};

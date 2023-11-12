@@ -23,8 +23,7 @@ def generate_random_user_agent() -> str:
 
     return f'Mozilla/5.0 ({random.choice(platforms)}) AppleWebKit/537.36 ({random.choice(browsers)})'
 
-def generate_header() -> dict:
-    user_agent = generate_random_user_agent()
+def generate_header(user_agent: str) -> dict:
     google_referer_url = (
         "https://www.google.com/search?q=seek&oq=seek&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxiKBTIJCAAQIxgnGIoFMhI"
         "IARAuGEMYxwEYsQMY0QMYigUyCQgCECMYJxiKBTINCAMQABixAxjJAxiABDINCAQQABiSAxixAxiABDIGCAUQRRg8MgYIBhBF"
@@ -38,19 +37,32 @@ def generate_header() -> dict:
 
     return header
 
-def scrape_website(url: str) -> None:
+def scrape_website(url: str, header: dict) -> requests.models.Response:
     header = generate_header()
 
     session = requests.Session()
     session.headers.update(header)
 
     response = session.get(url)
-    print(response.text)
+    
+    return response
+
+def get_job_ids_from_response(response: requests.models.Response) -> list:
+    html_content = response.text
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    script_tag = soup.find("script", {"data-automation" : "server-state"})
+
+    print(script_tag.contents[0])
+
+
 
 def main():
-    # Example usage:
-    website_url = 'https://www.seek.com.au/jobs/in-All-Brisbane-QLD'  # Replace with the actual URL of the website
-    scrape_website(website_url)
+    website_url = 'https://www.seek.com.au/Software-jobs'
+    user_agent = generate_random_user_agent()
+    header = generate_header(user_agent)
+    response_data = scrape_website(website_url, header)
+
 
 if __name__ == "__main__":
     main()

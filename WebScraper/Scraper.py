@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 import time
+import json
 
 def generate_random_user_agent() -> str:
     platforms = [
@@ -38,8 +39,6 @@ def generate_header(user_agent: str) -> dict:
     return header
 
 def scrape_website(url: str, header: dict) -> requests.models.Response:
-    header = generate_header()
-
     session = requests.Session()
     session.headers.update(header)
 
@@ -51,9 +50,15 @@ def get_job_ids_from_response(response: requests.models.Response) -> list:
     html_content = response.text
     soup = BeautifulSoup(html_content, "html.parser")
 
-    script_tag = soup.find("script", {"data-automation" : "server-state"})
+    data_from_soup = soup.find("script", {"data-automation" : "server-state"}).get_text(strip=True)
 
-    print(script_tag.contents[0])
+    start_index = data_from_soup.find('"jobIds"') + len('"jobIds:"')
+    end_index = data_from_soup.find(']', start_index) + 1
+    window_SEEK_REDUX_DATA_content = data_from_soup[start_index:end_index]
+    print(window_SEEK_REDUX_DATA_content)
+
+    # x_dict = json.loads(window_SEEK_REDUX_DATA_content)
+    # print(x_dict)
 
 
 
@@ -62,6 +67,7 @@ def main():
     user_agent = generate_random_user_agent()
     header = generate_header(user_agent)
     response_data = scrape_website(website_url, header)
+    job_ids = get_job_ids_from_response(response_data)
 
 
 if __name__ == "__main__":

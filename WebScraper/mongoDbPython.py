@@ -51,23 +51,44 @@ def delete_many_jobs(jobs):
     except Exception as error:
         logging.info(f"Failed to delete {len(jobs)} jobs with error {error}")
 
-def get_all_jobs():
+def get_all_jobs_and_return_as_list():
+    jobs = []
+
     try:
         client = MongoClient(mongoDB_uri)
         db = client["Jobs"]
         all_jobs = db.Jobs.find()
+        
+        for job in all_jobs:
+            jobs.append(job)
+
         client.close()
 
-        logging.info(f"Succesfully found {len(all_jobs)} jobs in db")
-
-        return all_jobs
+        logging.info(f"Succesfully found {len(jobs)} jobs in db")
     
     except Exception as error:
-        logging.info(f"Failed to get jobs from db")
-
-
-
+        logging.info(f"Failed to get jobs from db: {error}")
     
-if __name__ == "__main__":
-    insert_single_job({"test":"test"})
+    return jobs
+
+def get_all_job_ids_and_return_as_list():
+    job_ids = []
+
+    try:
+        client = MongoClient(mongoDB_uri)
+        db = client["Jobs"]
+        all_jobs = db.Jobs.find()
+        
+        for job in all_jobs:
+            job_ids.append(job["job_id"])
+
+        client.close()
+
+        logging.info(f"Succesfully found {len(job_ids)} job ids in db")
+    
+    except Exception as error:
+        logging.info(f"Failed to get job ids from db: {error}")
+    
+    return job_ids
+
 

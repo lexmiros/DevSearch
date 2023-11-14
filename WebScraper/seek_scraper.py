@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
-from mongoDbPython import insert_single_job, insert_many_jobs
-
+from mongoDbPython import insert_single_job, insert_many_jobs, get_all_jobs_and_return_as_list, get_all_job_ids_and_return_as_list
 import time
 import requests
 import random
@@ -241,10 +240,11 @@ def get_job_details_for_all_job_ids(job_ids):
 
 def main():
     """Main function to initiate the job ID retrieval process."""
-    job_ids = iterate_over_seek_pages_to_get_job_ids()
+    # job_ids = iterate_over_seek_pages_to_get_job_ids()
     
-    jobs = get_job_details_for_all_job_ids(job_ids)
-    insert_many_jobs(jobs)
+    # jobs = get_job_details_for_all_job_ids(job_ids)
+    # insert_many_jobs(jobs)
+    print(get_all_job_ids_and_return_as_list()[0])
 
 
 if __name__ == "__main__":

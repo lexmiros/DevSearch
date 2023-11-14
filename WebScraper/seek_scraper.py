@@ -1,4 +1,6 @@
 from bs4 import BeautifulSoup
+from mongoDbPython import insert_single_job, insert_many_jobs
+
 import time
 import requests
 import random
@@ -9,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 
 SEEK_BASE_URL = "https://www.seek.com.au/"
 SEEK_SOFTWARE_DEVELOPER_BASE_URL = f"{SEEK_BASE_URL}Software-Developer-jobs/"
-SLEEP_DURATION_RANGE = (2, 6)
+SLEEP_DURATION_RANGE = (1, 2)
 MAX_PAGES = 1
 
 class Non200ResponseError(Exception):
@@ -61,6 +63,9 @@ def make_request(url: str, header: dict) -> requests.models.Response:
         if response.status_code != 200:
             raise Non200ResponseError(
                 f"Non-200 response: {response.status_code}")
+        
+        sleep_duration = random.uniform(*SLEEP_DURATION_RANGE)
+        time.sleep(sleep_duration)
 
         return response
     except requests.exceptions.RequestException as exception:
@@ -110,7 +115,6 @@ def iterate_over_seek_pages_to_get_job_ids():
 
         while page_number <= MAX_PAGES and found_properties:
             logging.info(f"Attempting to get results from page {page_number}")
-            sleep_duration = random.uniform(*SLEEP_DURATION_RANGE)
 
             current_url = f"{regional_url}?page={page_number}"
 
@@ -128,8 +132,7 @@ def iterate_over_seek_pages_to_get_job_ids():
             all_job_ids.extend(job_ids)
             page_number += 1
             logging.info("Job ids found, moving onto next page")
-            time.sleep(sleep_duration)
-
+            
     logging.info(f"{len(all_job_ids)} job ids found")
 
     return all_job_ids
@@ -198,17 +201,53 @@ def get_job_details_for_job_id(job_id):
     job_employement_type = get_nested_value(job_details, ["workTypes", "label"])
     job_advertiser = get_nested_value(job_details, ["advertiser", "name"])
     job_salary = get_nested_value(job_details, ["salary", "label"])
-    job_listed = get_nested_value(job_details, ["listedAt", "shortLabel"])
+    job_listed_duration = get_nested_value(job_details, ["listedAt", "shortLabel"])
     job_classification = get_nested_value(job_details, ["tracking", "classificationInfo", "classification"])
     job_sub_classification = get_nested_value(job_details, ["tracking", "classificationInfo", "subClassification"])
     job_employer_questions = get_nested_value(job_details, ["products", "questionnaire", "questions"])
     job_description = get_nested_value(job_details, ["content"])
 
+    return {
+        "job_id": job_id,
+        "apply_link" : job_quick_apply_link,
+        "location": job_location,
+        "employment_type": job_employement_type,
+        "advertiser": job_advertiser,
+        "salary": job_salary,
+        "listed_duration": job_listed_duration,
+        "classification": job_classification,
+        "sub_classification": job_sub_classification,
+        "employer_questions": job_employer_questions,
+        "description": job_description
+    }
+
+def get_job_details_for_all_job_ids(job_ids):
+    jobs = []
+    counter = 1
+    number_of_ids = len(job_ids)
+
+    for id in job_ids:
+        logging.info(f"Getting job information for job {id} (job {counter} of {number_of_ids})")
+
+        try:
+            jobs.append(get_job_details_for_job_id(id))
+        except:
+            logging.info(f"Failed to get job data for job {id} (job {counter} of {number_of_ids})")
+
+        counter += 1
+
+    return jobs
+     
+
 def main():
     """Main function to initiate the job ID retrieval process."""
+    job_ids = iterate_over_seek_pages_to_get_job_ids()
+    
+    jobs = get_job_details_for_all_job_ids(job_ids)
+    insert_many_jobs(jobs)
 
-    #x = iterate_over_seek_pages_to_get_job_ids()
-    get_job_details_for_job_id("71396507")
 
 if __name__ == "__main__":
     main()
+    
+

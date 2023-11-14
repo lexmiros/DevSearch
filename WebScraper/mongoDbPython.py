@@ -41,15 +41,26 @@ def delete_single_job(job):
     except Exception as error:
         logging.info(f"Failed to delete job {job.job_id} with error {error}")
 
-def delete_many_jobs(jobs):
+def delete_many_jobs_on_job_id(job_ids):
+    try:
+        job_ids_dict = {"job_id": {"$in": job_ids}}
+        client = MongoClient(mongoDB_uri)
+        db = client["Jobs"]
+        result = db.Jobs.delete_many(job_ids_dict)
+        client.close()
+        logging.info(f"Succesfully deleted {result.deleted_count} jobs from db")
+    except Exception as error:
+        logging.info(f"Failed to delete {result.deleted_count} jobs with error {error}")
+
+def delete_all_jobs():
     try:
         client = MongoClient(mongoDB_uri)
         db = client["Jobs"]
-        db.Jobs.delete_many(jobs)
+        result = db.Jobs.delete_many({})
         client.close()
-        logging.info(f"Succesfully deleted {len(jobs)} from db")
+        logging.info(f"Succesfully deleted {result.deleted_count} jobs from db")
     except Exception as error:
-        logging.info(f"Failed to delete {len(jobs)} jobs with error {error}")
+        logging.info(f"Failed to delete {result.deleted_count} jobs with error {error}")
 
 def get_all_jobs_and_return_as_list():
     jobs = []

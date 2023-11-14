@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from mongoDbPython import insert_single_job, insert_many_jobs, get_all_jobs_and_return_as_list, get_all_job_ids_and_return_as_list
+from mongoDbPython import insert_many_jobs, get_all_job_ids_and_return_as_list, delete_many_jobs_on_job_id
 import time
 import requests
 import random
@@ -220,7 +220,7 @@ def get_job_details_for_job_id(job_id):
         "description": job_description
     }
 
-def get_job_details_for_all_job_ids(job_ids):
+def get_job_details_for_job_ids(job_ids):
     jobs = []
     counter = 1
     number_of_ids = len(job_ids)
@@ -236,16 +236,37 @@ def get_job_details_for_all_job_ids(job_ids):
         counter += 1
 
     return jobs
-     
+
+def return_all_ids_found_in_scrape_not_in_db(job_ids_in_scrape, job_ids_in_db):
+    return [job_id for job_id in job_ids_in_scrape if job_id not in job_ids_in_db]
+
+def return_all_ids_found_in_db_not_in_scrape(job_ids_in_scrape, job_ids_in_db):
+    return [job_id for job_id in job_ids_in_db if job_id not in job_ids_in_scrape]
+
+def return_all_unique_job_ids(job_ids):
+    return set(job_ids)
+
+def update_seek_job_data():
+    #Get job ids
+    seek_job_ids = iterate_over_seek_pages_to_get_job_ids()
+    seek_job_ids = return_all_unique_job_ids(seek_job_ids)
+    job_ids_in_db = get_all_job_ids_and_return_as_list()
+
+    #Update db with new jobs found on Seek
+    seek_job_ids_not_in_db = return_all_ids_found_in_scrape_not_in_db(seek_job_ids, job_ids_in_db)
+    seek_job_data = get_job_details_for_job_ids(seek_job_ids_not_in_db)
+    insert_many_jobs(seek_job_data)
+
+    #Delete jobs in db that are no longer listed
+    db_ids_not_in_seek_ids = return_all_ids_found_in_db_not_in_scrape(seek_job_ids, job_ids_in_db)
+    delete_many_jobs_on_job_id(db_ids_not_in_seek_ids)
+
+
+
+
 
 def main():
     """Main function to initiate the job ID retrieval process."""
-    # job_ids = iterate_over_seek_pages_to_get_job_ids()
-    
-    # jobs = get_job_details_for_all_job_ids(job_ids)
-    # insert_many_jobs(jobs)
-    print(get_all_job_ids_and_return_as_list()[0])
-
 
 if __name__ == "__main__":
     main()

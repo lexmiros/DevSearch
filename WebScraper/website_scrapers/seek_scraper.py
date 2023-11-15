@@ -9,8 +9,7 @@ logging.basicConfig(level=logging.INFO)
 
 SEEK_BASE_URL = "https://www.seek.com.au/"
 SEEK_SOFTWARE_DEVELOPER_BASE_URL = f"{SEEK_BASE_URL}Software-Developer-jobs/"
-SLEEP_DURATION_RANGE = (1, 2)
-MAX_PAGES = 1
+MAX_PAGES = 25
 
 
 def extract_job_ids_from_response(response: requests.models.Response) -> list:
@@ -186,15 +185,3 @@ def update_seek_job_data():
     #Delete jobs in db that are no longer listed
     db_ids_not_in_seek_ids = return_all_ids_found_in_db_not_in_scrape(seek_job_ids, job_ids_in_db)
     delete_many_jobs_on_job_id(db_ids_not_in_seek_ids)
-
-
-
-
-
-def main():
-    """Main function to initiate the job ID retrieval process."""
-
-if __name__ == "__main__":
-    main()
-    
-

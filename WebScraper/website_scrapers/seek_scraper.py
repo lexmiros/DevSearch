@@ -3,13 +3,15 @@ import logging
 from bs4 import BeautifulSoup
 from db_connector import insert_many_jobs, get_all_job_ids_and_return_as_list, delete_many_jobs_on_job_id
 from common_utils import generate_request_header, make_request, get_nested_value, return_all_ids_found_in_db_not_in_scrape, return_all_ids_found_in_scrape_not_in_db, return_all_unique_job_ids
-from urllib.parse import urljoin
+
 
 logging.basicConfig(level=logging.INFO)
 
 SEEK_BASE_URL = "https://www.seek.com.au/"
-SEEK_SOFTWARE_DEVELOPER_BASE_URL = f"{SEEK_BASE_URL}Software-Developer-jobs/"
-MAX_PAGES = 25
+SEEK_SOFTWARE_DEVELOPER_URL = "Software-Developer-jobs/"
+SEEK_IT_ENGINEERING_SCIENCE_CLASSIFICATION_CODE = "?classification=6281%2C1209%2C1223"
+
+MAX_PAGES = 1
 
 def extract_job_ids_from_response(response):
     """Extract job IDs from the response."""
@@ -47,7 +49,7 @@ def iterate_over_seek_pages_to_get_job_ids():
 
     for region in regions:
         page_number = 1
-        regional_url = urljoin(SEEK_SOFTWARE_DEVELOPER_BASE_URL, region)
+        regional_url = f"{SEEK_BASE_URL}{SEEK_SOFTWARE_DEVELOPER_URL}{region}{SEEK_IT_ENGINEERING_SCIENCE_CLASSIFICATION_CODE}"
         found_properties = True
 
         logging.info(f"Attempting to get results for region: {region}")

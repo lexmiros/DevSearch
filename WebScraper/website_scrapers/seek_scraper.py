@@ -1,9 +1,9 @@
+import json
+import logging
 from bs4 import BeautifulSoup
 from db_connector import insert_many_jobs, get_all_job_ids_and_return_as_list, delete_many_jobs_on_job_id
 from common_utils import generate_request_header, make_request, get_nested_value, return_all_ids_found_in_db_not_in_scrape, return_all_ids_found_in_scrape_not_in_db, return_all_unique_job_ids
-import requests
-import json
-import logging
+from urllib.parse import urljoin
 
 logging.basicConfig(level=logging.INFO)
 
@@ -11,8 +11,7 @@ SEEK_BASE_URL = "https://www.seek.com.au/"
 SEEK_SOFTWARE_DEVELOPER_BASE_URL = f"{SEEK_BASE_URL}Software-Developer-jobs/"
 MAX_PAGES = 25
 
-
-def extract_job_ids_from_response(response: requests.models.Response) -> list:
+def extract_job_ids_from_response(response):
     """Extract job IDs from the response."""
     if not response:
         return None
@@ -23,7 +22,7 @@ def extract_job_ids_from_response(response: requests.models.Response) -> list:
         script_element_text = soup.find(
             "script", {"data-automation": "server-state"}).get_text(strip=True)
 
-        if script_element_text is None:
+        if not script_element_text:
             raise ValueError("Script element not found")
 
         start_index = script_element_text.find('"jobIds"') + len('"jobIds:"')
@@ -48,7 +47,7 @@ def iterate_over_seek_pages_to_get_job_ids():
 
     for region in regions:
         page_number = 1
-        regional_url = f"{SEEK_SOFTWARE_DEVELOPER_BASE_URL}{region}"
+        regional_url = urljoin(SEEK_SOFTWARE_DEVELOPER_BASE_URL, region)
         found_properties = True
 
         logging.info(f"Attempting to get results for region: {region}")
@@ -72,25 +71,24 @@ def iterate_over_seek_pages_to_get_job_ids():
             all_job_ids.extend(job_ids)
             page_number += 1
             logging.info("Job ids found, moving onto next page")
-            
+
     logging.info(f"{len(all_job_ids)} job ids found")
 
     return all_job_ids
 
 def convert_job_listing_data_response_to_json(response):
+    """Convert job listing data response to JSON."""
     html_content = response.text
     soup = BeautifulSoup(html_content, "html.parser")
 
     script_element_text = soup.find(
         "script", {"data-automation": "server-state"}).get_text(strip=True)
     
-    #Find the start and end of data needed
     start_index = script_element_text.find("window.SEEK_REDUX_DATA = ") + len("window.SEEK_REDUX_DATA = ")
     end_index = script_element_text.find("};", start_index) + 1
 
     json_data = script_element_text[start_index:end_index].strip()
     
-    #Missing values marked as undefined without quotes breaking json formatting
     while "undefined" in json_data:
         json_data = json_data.replace("undefined", '"N/A"')
 
@@ -99,28 +97,26 @@ def convert_job_listing_data_response_to_json(response):
     return seek_config_dict
 
 def get_apply_link_from_request_response(response):
+    """Get apply link from request response."""
     html_code = response.text
-
     soup = BeautifulSoup(html_code, 'html.parser')
 
-    # Find the div with the specified class
     div_element = soup.find('div', class_='_1wkzzau0 a1msqip _126xumx0')
 
-    # Extract the href attribute from the anchor tag within the div
     if div_element:
         anchor_element = div_element.find('a')
         if anchor_element:
             href_link = anchor_element.get('href')
-
+            return f"seek.com.au/{href_link}"
         else:
-            print("No anchor tag found within the div.")
+            logging.warning("No anchor tag found within the div.")
     else:
-        print("Div with specified class not found.")
-    
-    return f"seek.com.au/{href_link}"
-    
+        logging.warning("Div with specified class not found.")
+
+    return None
 
 def get_job_details_for_job_id(job_id):
+    """Get job details for a specific job ID."""
     url = f"{SEEK_BASE_URL}job/{job_id}"
     header = generate_request_header()
     response = make_request(url, header)
@@ -141,7 +137,7 @@ def get_job_details_for_job_id(job_id):
 
     return {
         "job_id": job_id,
-        "apply_link" : job_quick_apply_link,
+        "apply_link": job_quick_apply_link,
         "location": job_location,
         "employment_type": job_employement_type,
         "advertiser": job_advertiser,
@@ -154,34 +150,32 @@ def get_job_details_for_job_id(job_id):
     }
 
 def get_job_details_for_job_ids(job_ids):
+    """Get job details for a list of job IDs."""
     jobs = []
     counter = 1
     number_of_ids = len(job_ids)
 
-    for id in job_ids:
-        logging.info(f"Getting job information for job {id} (job {counter} of {number_of_ids})")
+    for job_id in job_ids:
+        logging.info(f"Getting job information for job {job_id} (job {counter} of {number_of_ids})")
 
         try:
-            jobs.append(get_job_details_for_job_id(id))
-        except:
-            logging.info(f"Failed to get job data for job {id} (job {counter} of {number_of_ids})")
+            jobs.append(get_job_details_for_job_id(job_id))
+        except Exception as e:
+            logging.error(f"Failed to get job data for job {job_id} (job {counter} of {number_of_ids}): {e}")
 
         counter += 1
 
     return jobs
 
-
 def update_seek_job_data():
-    #Get job ids
+    """Update Seek job data in the database."""
     seek_job_ids = iterate_over_seek_pages_to_get_job_ids()
     seek_job_ids = return_all_unique_job_ids(seek_job_ids)
     job_ids_in_db = get_all_job_ids_and_return_as_list()
 
-    #Update db with new jobs found on Seek
     seek_job_ids_not_in_db = return_all_ids_found_in_scrape_not_in_db(seek_job_ids, job_ids_in_db)
     seek_job_data = get_job_details_for_job_ids(seek_job_ids_not_in_db)
     insert_many_jobs(seek_job_data)
 
-    #Delete jobs in db that are no longer listed
     db_ids_not_in_seek_ids = return_all_ids_found_in_db_not_in_scrape(seek_job_ids, job_ids_in_db)
     delete_many_jobs_on_job_id(db_ids_not_in_seek_ids)

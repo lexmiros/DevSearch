@@ -3,6 +3,8 @@ import requests
 import random
 import logging
 
+from bs4 import BeautifulSoup
+
 SLEEP_DURATION_RANGE = (1, 2)
 
 class Non200ResponseError(Exception):
@@ -79,3 +81,7 @@ def return_all_ids_found_in_db_not_in_scrape(job_ids_in_scrape, job_ids_in_db):
 
 def return_all_unique_job_ids(job_ids):
     return set(job_ids)
+
+def remove_html_tags_from_text(html_text):
+    soup = BeautifulSoup(html_text, "html.parser")
+    return soup.get_text(separator=" ")

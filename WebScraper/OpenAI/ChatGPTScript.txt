@@ -1,0 +1,30 @@
+Hello,
+
+I am going to send you a large section of text. This text is a job description for a software developer job. I want you to go through the text, and answer some questions for me. What is REALLY important, is the answer needs to be in a proper json format. I want you to respond ONLY with the json formatted response, nothing else. Please not, the job description contains HTML formatting, please IGNORE This.
+
+The following questions are :
+"programming_languages" : please add a python list of all programming languages listed in the description below EXLUDING frameworks and libarires. Normalise these if possible (e.g python should be Python, js should be JavaScript etc)
+"programming_libraries_frameworks": please adda  python list of all programming libraries and frameworks mentioned in the description below.Normalise these if possible (e.g react should be React etc). This does not include DevOps or cloud platforms.
+"additional_developer_skills": please add a python list of all commonly used programming tools that aren't programming languages or libraries or frameworks. For example, AWS, Azure, CICD, Jenkins, OpenShift. Normalise these if possible. (Amazon web services should be AWS, azure should be Azure etc). This does not include soft skills or experience such as Startup experience.
+"years_of_experience": please add the years of experience mentioned in the description below, if it is not mentioned, set as "Not specified". The years of experience should be added as one of the following ranges. 0, 1 - 3, 4 - 6, 7 - 10, 10+. Note, 0 is NOT the same as Not specified. 0 should be applied to graduate, and internship jobs, where another YOE is not specified. If a job has a range that is inbetween the preset ranges given (e.g 3 - 4), answer with both ranges. Please return this response as a python list, even if there is only one range present.
+"wfh_tag": please add the work from home description or hinting. If it is not mentioned at all, set as "Not specified". If it sounds like it is fully remote, or there is the option to choose fully remote if desired, set as "Fully remote". If it sounds like there is a mix of in office and remote possible, set as "Hybrid". If it sounds like there is no remote option to work, set "No WFH"
+"salary": Enter the salary mentioned in the job description below. If not mentioned, set as "Not Specified". This should NOT include other financial perks such as super or Equity
+"salary_includes_super": Answer whether the salary includes super. Answer should be Yes, No, or Not Specified if it's not stated or no salary is included. Please note, this may be found in the description in the general form of "Salaray amount + super"
+"other_financial_benefits": Answer whether there are other financial benefits excluding salary and super. This can include things like equity, or extra leave. Please note, in the context of these jobs, 4 weeks paid leave is MANDATORY so does not count as a benefit.
+"developer_type": Please set as the type of development work set out in the description below. Some examples could be, Full-stack engineering, Back-end engineering, Front-end engineering, Systems programming, Data engineering, Machine Learning, Low level programming
+
+
+The  response format should be :
+{
+  "programming_languages" : ANSWER_HERE,
+  "programming_libraries_frameworks": ANSWER_HERE,
+  "additional_developer_skills": ANSWER_HERE.
+  "years_of_experience": ANSWER_HERE,
+  "wfh_tag": ANSWER_HERE,
+  "salary": ANSWER_HERE,
+  "salary_includes_super": ANSWER_HERE,
+  "other_financial_benefits": ANSWER_HERE
+  "developer_type": ANSWER_HERE
+}
+The following is a list of jobs, please reply in the correct format to each one. Each NEW JOB will be wrapper on <job> <job/> tags to show the start and end of each job.
+<job> <job/>

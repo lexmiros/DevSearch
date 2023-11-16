@@ -2,7 +2,7 @@ import json
 import logging
 from bs4 import BeautifulSoup
 from db_connector import insert_many_jobs, get_all_job_ids_and_return_as_list, delete_many_jobs_on_job_id
-from common_utils import generate_request_header, make_request, get_nested_value, return_all_ids_found_in_db_not_in_scrape, return_all_ids_found_in_scrape_not_in_db, return_all_unique_job_ids
+from common_utils import generate_request_header, make_request, get_nested_value, return_all_ids_found_in_db_not_in_scrape, return_all_ids_found_in_scrape_not_in_db, return_all_unique_job_ids, remove_html_tags_from_text
 
 
 logging.basicConfig(level=logging.INFO)
@@ -14,7 +14,7 @@ SEEK_IT_ENGINEERING_SCIENCE_CLASSIFICATION_CODE = "?classification=6281%2C1209%2
 MAX_PAGES = 1
 
 def extract_job_ids_from_response(response):
-    """Extract job IDs from the response."""
+    """Extract job IDs from a single page SEEK response."""
     if not response:
         return None
     try:
@@ -135,7 +135,8 @@ def get_job_details_for_job_id(job_id):
     job_classification = get_nested_value(job_details, ["tracking", "classificationInfo", "classification"])
     job_sub_classification = get_nested_value(job_details, ["tracking", "classificationInfo", "subClassification"])
     job_employer_questions = get_nested_value(job_details, ["products", "questionnaire", "questions"])
-    job_description = get_nested_value(job_details, ["content"])
+    job_description_with_html = get_nested_value(job_details, ["content"])
+    job_description_without_html = remove_html_tags_from_text(job_description_with_html)
 
     return {
         "job_id": job_id,
@@ -148,24 +149,25 @@ def get_job_details_for_job_id(job_id):
         "classification": job_classification,
         "sub_classification": job_sub_classification,
         "employer_questions": job_employer_questions,
-        "description": job_description
+        "description_with_html": job_description_with_html,
+        "description_without_html": job_description_without_html
     }
 
-def get_job_details_for_job_ids(job_ids):
+def get_job_details_for_list_of_job_ids(job_ids):
     """Get job details for a list of job IDs."""
     jobs = []
-    counter = 1
+    job_counter = 1
     number_of_ids = len(job_ids)
 
     for job_id in job_ids:
-        logging.info(f"Getting job information for job {job_id} (job {counter} of {number_of_ids})")
+        logging.info(f"Getting job information for job {job_id} (job {job_counter} of {number_of_ids})")
 
         try:
             jobs.append(get_job_details_for_job_id(job_id))
         except Exception as e:
-            logging.error(f"Failed to get job data for job {job_id} (job {counter} of {number_of_ids}): {e}")
+            logging.error(f"Failed to get job data for job {job_id} (job {job_counter} of {number_of_ids}): {e}")
 
-        counter += 1
+        job_counter += 1
 
     return jobs
 
@@ -176,7 +178,7 @@ def update_seek_job_data():
     job_ids_in_db = get_all_job_ids_and_return_as_list()
 
     seek_job_ids_not_in_db = return_all_ids_found_in_scrape_not_in_db(seek_job_ids, job_ids_in_db)
-    seek_job_data = get_job_details_for_job_ids(seek_job_ids_not_in_db)
+    seek_job_data = get_job_details_for_list_of_job_ids(seek_job_ids_not_in_db)
     insert_many_jobs(seek_job_data)
 
     db_ids_not_in_seek_ids = return_all_ids_found_in_db_not_in_scrape(seek_job_ids, job_ids_in_db)
